@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.9, 18.0, 17.0]
+        node-version: [18.9]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
