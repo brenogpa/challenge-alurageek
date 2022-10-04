@@ -24,7 +24,7 @@ jobs:
 
       - name: Install and build
         working-directory: ./alurageek
-        run: npm install && npm run build && cp dist/alurageek/index.html dist/alurageek/404.html
+        run: npm install && npm run gh-build && cp dist/alurageek/index.html dist/alurageek/404.html
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
