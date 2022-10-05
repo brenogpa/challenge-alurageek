@@ -28,10 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/boostrap.min.css",
-              "./node_modules/bootstrap/scss/bootstrap.scss",
-              "./node_modules/font-awesome/css/font-awesome.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },

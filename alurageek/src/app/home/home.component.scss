@@ -1,0 +1,22 @@
+.banner-image{
+  background-image: url("../../assets/img/banner.png");
+  //background-repeat: no-repeat;
+  height: 352px;
+  width: 100%;
+}
+
+.container-layout-banner{
+  position: relative;
+  top: 170px;
+  padding-left: 70px;
+}
+
+.banner-layout-text{
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.botao-layout-banner{
+  font-weight: 100;
+}
