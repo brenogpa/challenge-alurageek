@@ -14,7 +14,6 @@ import { HomeModule } from './home/home.module';
     AppRoutingModule,
     NgbModule,
     FontAwesomeModule,
-    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
