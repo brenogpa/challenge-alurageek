@@ -1,0 +1,18 @@
+.icone-pesquisa{
+  top: 6px;
+  left: -29px;
+  position: relative;
+  color: #A2A2A2;
+}
+
+.barra-pesquisa{
+  background: #F5F5F5;
+}
+
+.barra-pesquisa::placeholder{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #A2A2A2;
+}
