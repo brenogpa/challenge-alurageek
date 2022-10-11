@@ -6,3 +6,16 @@ a {
   text-decoration: none;
   color: #464646;
 }
+
+label {
+  display: inline-block;
+  position: relative;
+  font-size: 13px;
+  top: 22px;
+  left: 15px;
+  color: #A2A2A2;
+}
+
+input::placeholder {
+  color: #A2A2A2;
+}
