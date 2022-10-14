@@ -1,0 +1,77 @@
+[
+    {
+        "nome": "Star Wars",
+        "produtos": [
+            {
+                "nome": "Produto 1",
+                "preco": 100,
+                "imagem": "star-wars-1.png"
+            },
+            {
+                "nome": "Produto 2",
+                "preco": 60,
+                "imagem": "star-wars-2.png"
+            },
+            {
+                "nome": "Produto 3",
+                "preco": 225,
+                "imagem": "star-wars-3.png"
+            },
+            {
+                "nome": "Produto 4",
+                "preco": 60,
+                "imagem": "star-wars-4.png"
+            }
+        ]
+    },
+    {
+        "nome": "Consoles",
+        "produtos": [
+            {
+                "nome": "Produto 1",
+                "preco": 100,
+                "imagem": "console-1.png"
+            },
+            {
+                "nome": "Produto 2",
+                "preco": 60,
+                "imagem": "console-2.png"
+            },
+            {
+                "nome": "Produto 3",
+                "preco": 225,
+                "imagem": "console-3.png"
+            },
+            {
+                "nome": "Produto 4",
+                "preco": 60,
+                "imagem": "console-4.png"
+            }
+        ]
+    },
+    {
+        "nome": "Star Wars",
+        "produtos": [
+            {
+                "nome": "Produto 1",
+                "preco": 100,
+                "imagem": "diversos-1.png"
+            },
+            {
+                "nome": "Produto 2",
+                "preco": 60,
+                "imagem": "diversos-2.png"
+            },
+            {
+                "nome": "Produto 3",
+                "preco": 225,
+                "imagem": "diversos-3.png"
+            },
+            {
+                "nome": "Produto 4",
+                "preco": 60,
+                "imagem": "diversos-4.png"
+            }
+        ]
+    }
+]
