@@ -1,6 +1,9 @@
-[
-    {
-        "user": "teste@teste.com",
-        "password": "teste123"
-    }
-]
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "user": "teste@teste.com",
+            "password": "teste123"
+        }
+    ]
+}
