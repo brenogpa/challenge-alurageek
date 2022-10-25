@@ -1,12 +1,7 @@
-const express = require("express");
-const server = express();
-const users = require('./src/data/users.json');
+import app from './src/app.js'
 
-server.get('/usuarios', (req,res) => {
-    return res.json(users)
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+    console.log(`Servidor escutando em http://localhost:${port}`)
 })
-
-server.listen(3000, () => {
-    console.log('Servidor funcionando (ouvindo na porta 3000)')
-});
-
