@@ -2,15 +2,29 @@
   <div class="d-flex justify-content-center">
     <div class="row mt-5 mb-5">
       <h3 class="text-center mt-5 mb-4"><b>Iniciar Sessão</b></h3>
-      <form action="">
-        <div class="form-outline mb-4">
-          <input type="email" class="form-control" placeholder="Escreva seu email"/>
+      <form class="form mt-4" (ngSubmit)="login()">
+        <div class="form-group form-outline mb-4">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Escreva seu email"
+            [(ngModel)]="user"
+            name="user"
+          />
         </div>
         <div class="form-outline mb-4">
-          <input type="password" class="form-control" placeholder="Escreva sua senha"/>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Escreva sua senha"
+            [(ngModel)]="password"
+            name="password"
+          />
         </div>
         <div class="d-grid gap-2">
-          <button type="button" class="btn btn-primary btn-block mb-5">Entrar</button>
+          <button type="submit" class="btn btn-primary btn-block mb-5">
+            Entrar
+          </button>
         </div>
       </form>
     </div>
