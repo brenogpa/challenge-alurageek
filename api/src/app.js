@@ -1,18 +1,14 @@
-import express from "express";
+const express = require("express");
 
 const app = express();
+const router = express.Router();
 
-const loginUsers = [
-  { id: 1, user: "teste@teste.com", password: "teste123" },
-  { id: 2, user: "teste1@teste.com", password: "123" },
-];
+const route = router.get("/", (req, res, next) => {
+  res.status(200).send({
+    title: "Node Store API",
+    version: "0.0.1",
+  });
+});
+app.use("/", route);
 
-app.get('/', (req, res) => {
-  res.status(200).send('API funcinando')
-})
-
-app.get('/users', (req, res) => {
-  res.status(200).json(loginUsers)
-})
-
-export default app
+module.exports = app;
