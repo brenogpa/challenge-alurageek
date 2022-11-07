@@ -12,16 +12,18 @@ mongoose.connect(
 
 // Carrega os models
 const Product = require("./models/product");
-const Customer = require("./models/customer");
+const User = require("./models/user");
 
 // Carrega as rotas
 const indexRoute = require("./routes/index-route");
 const productRoute = require("./routes/product-routes");
+const userRoute = require("./routes/user-routes");
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/", indexRoute);
 app.use("/products", productRoute);
+app.use("/users", userRoute);
 
 module.exports = app;
