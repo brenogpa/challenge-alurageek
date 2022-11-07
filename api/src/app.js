@@ -1,18 +1,29 @@
-import express from "express";
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 const app = express();
+const router = express.Router();
 
-const loginUsers = [
-  { id: 1, user: "teste@teste.com", password: "teste123" },
-  { id: 2, user: "teste1@teste.com", password: "123" },
-];
+// Conecta ao banco
+mongoose.connect(
+  "mongodb+srv://brenogpa:bb1703@bstorage.kfumj4o.mongodb.net/?retryWrites=true&w=majority"
+);
 
-app.get('/', (req, res) => {
-  res.status(200).send('API funcinando')
-})
+// Carrega os models
+const Product = require("./models/product");
+const User = require("./models/user");
 
-app.get('/users', (req, res) => {
-  res.status(200).json(loginUsers)
-})
+// Carrega as rotas
+const indexRoute = require("./routes/index-route");
+const productRoute = require("./routes/product-routes");
+const userRoute = require("./routes/user-routes");
 
-export default app
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use("/", indexRoute);
+app.use("/products", productRoute);
+app.use("/users", userRoute);
+
+module.exports = app;
