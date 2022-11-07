@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Product = mongoose.model("Product");
 
-//------------Métodos GET---------------
+//------------Método(s) GET---------------
 
 exports.get = (req, res, next) => {
   Product.find({}, "title price slug")
@@ -49,7 +49,7 @@ exports.getByTag = (req, res, next) => {
     });
 };
 
-//------------Métodos POST---------------
+//------------Método(s) POST---------------
 
 exports.post = (req, res, next) => {
   var product = new Product(req.body);
@@ -65,7 +65,7 @@ exports.post = (req, res, next) => {
     });
 };
 
-//------------Métodos PUT---------------
+//------------Método(s) PUT---------------
 
 exports.put = (req, res, next) => {
   Product.findByIdAndUpdate(req.params.id, {
@@ -89,7 +89,7 @@ exports.put = (req, res, next) => {
     });
 };
 
-//------------Métodos DELETE---------------
+//------------Método(s) DELETE---------------
 
 exports.delete = (req, res, next) => {
   Product.findOneAndRemove(req.body.id)
