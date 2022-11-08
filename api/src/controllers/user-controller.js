@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const User = mongoose.model("User");
 
 exports.get = (req, res, next) => {
-  User.find({}, "name email")
+  User.find({}, "name email password")
     .then((data) => {
       res.status(200).send(data);
     })
