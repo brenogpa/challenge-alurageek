@@ -1,14 +1,22 @@
-.banner-container{
+.banner-container {
   padding: 4.875rem 1rem 1rem;
   background: url("../../assets/img/banner.png") no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
 
-.banner-container__texto{
-  color: #FFFFFF;
+.banner-container__texto {
+  color: #ffffff;
 }
 
-.banner-container__botao{
+.banner-container__botao {
   font-weight: 100;
 }
+
+.btn-verTudo {
+  &:hover {
+    background-color: var(--bs-btn-bg);
+    color: var(--bs-btn-color);
+  }
+}
+
