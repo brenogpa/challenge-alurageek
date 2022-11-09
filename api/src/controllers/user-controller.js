@@ -1,26 +1,12 @@
-const mongoose = require("mongoose");
-const User = mongoose.model("User");
+const repository = require("../repositories/user-repository");
 
-exports.get = (req, res, next) => {
-  User.find({}, "name email password")
-    .then((data) => {
-      res.status(200).send(data);
-    })
-    .catch((e) => {
-      res.status(400).send(e);
+exports.post = async (req, res, next) => {
+  try {
+    await repository.create(req.body);
+    res.status(201).send({ message: "Usuário cadastrado com sucesso!" });
+  } catch (e) {
+    res.status(500).send({
+      message: "Falha ao cadastrar o usuário",
     });
-};
-
-exports.create = (req, res, next) => {
-  var user = new User(req.body);
-  user
-    .save()
-    .then((x) => {
-      res.status(201).send({ message: "Usuário cadastrado com sucesso!" });
-    })
-    .catch((e) => {
-      res
-        .status(400)
-        .send({ message: "Falha ao cadastrar o usuário.", data: e });
-    });
+  }
 };
