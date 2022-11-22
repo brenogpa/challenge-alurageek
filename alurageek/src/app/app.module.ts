@@ -11,9 +11,12 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
+import { ProductComponent } from './products/product/product.component';
+import { NewProductComponent } from './products/new-product/new-product.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, ProductComponent, NewProductComponent, ProductListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
