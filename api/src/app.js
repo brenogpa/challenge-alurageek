@@ -1,43 +1,22 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+const db = require("./config/dbConnect.js");
+const routes = require("./routes/index.js");
+const cors = require("cors");
 
-const app = express();
-const router = express.Router();
-
-// Conecta ao banco
-mongoose.connect(
-  "mongodb+srv://brenogpa:bb1703@bstorage.kfumj4o.mongodb.net/?retryWrites=true&w=majority"
-);
-
-// Carrega os models
-const Product = require("./models/product");
-const User = require("./models/user");
-const Order = require("./models/order");
-
-// Carrega as rotas
-const indexRoute = require("./routes/index-route");
-const productRoute = require("./routes/product-routes");
-const userRoute = require("./routes/user-routes");
-const orderRoute = require("./routes/order-route");
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-
-//CORS
-app.use(function (req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, x-access-token"
-  );
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  next();
+db.on("error", console.log.bind(console), "Erro de conexão com o banco");
+db.once("open", () => {
+  console.log("Conexão com o banco realizada com sucesso!");
 });
 
-app.use("/", indexRoute);
-app.use("/products", productRoute);
-app.use("/users", userRoute);
-app.use("/orders", orderRoute);
+const app = express();
+
+app.use(express.json());
+app.use(
+  cors({
+    origin: "*",
+  })
+);
+
+routes(app);
 
 module.exports = app;
