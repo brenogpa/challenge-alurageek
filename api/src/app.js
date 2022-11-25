@@ -3,9 +3,9 @@ const db = require("./config/dbConnect.js");
 const routes = require("./routes/index.js");
 const cors = require("cors");
 
-db.on("error", console.log.bind(console), "Erro de conexão com o banco");
+db.on("error", console.log.bind(console), "DB CONNECTION ERROR");
 db.once("open", () => {
-  console.log("Conexão com o banco realizada com sucesso!");
+  console.log("DB connected");
 });
 
 const app = express();

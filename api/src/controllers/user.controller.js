@@ -22,7 +22,7 @@ class UserController {
 
   static addUser = (req, res) => {
     let user = new users(req.body);
-    users.save((err) => {
+    user.save((err) => {
       if (err) {
         res
           .status(500)

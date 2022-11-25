@@ -22,7 +22,7 @@ class ProductController {
 
   static addProduct = (req, res) => {
     let product = new products(req.body);
-    products.save((err) => {
+    product.save((err) => {
       if (err) {
         res
           .status(500)
