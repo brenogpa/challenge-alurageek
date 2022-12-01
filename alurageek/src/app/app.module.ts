@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeModule } from './home/home.module';
+import { ProductsModule } from './components/products/products.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomeModule } from './home/home.module';
     ReactiveFormsModule,
     HttpClientModule,
     HomeModule,
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
