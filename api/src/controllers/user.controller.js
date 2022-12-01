@@ -1,4 +1,4 @@
-const users = require("../models/User.js");
+const users = require("../models/user.js");
 
 class UserController {
   static getUsers = (req, res) => {
@@ -50,10 +50,12 @@ class UserController {
       if (!err) {
         res.status(200).send({ message: "Usuário removido com sucesso!" });
       } else {
-        res.status(500).send({ message: "erro ao deletar usuário" });
+        res.status(500).send({ message: "Não foi possível deletar o usuário" });
       }
     });
   };
 }
+
+
 
 module.exports = UserController;
